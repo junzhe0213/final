@@ -221,8 +221,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\camera_follow.cs" />
+    <Compile Include="Assets\Script\cube_rotate.cs" />
     <Compile Include="Assets\Script\floor2.cs" />
-    <Compile Include="Assets\Script\move.cs" />
     <Compile Include="Assets\Script\player.cs" />
     <Compile Include="Assets\Script\player_destory.cs" />
   </ItemGroup>

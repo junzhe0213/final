@@ -5,9 +5,9 @@ using UnityEngine;
 public class camera_follow : MonoBehaviour {
     public GameObject player;
 
-    public float damping = 1;
+    public Vector3 offset;
 
-    Vector3 offset;
+    
 
 	void Start ()
     {
@@ -18,10 +18,8 @@ public class camera_follow : MonoBehaviour {
 	
 	void Update ()
     {
-
         //smooth
-        Vector3 desiredPosition = player.transform.position + offset;
-        Vector3 position = Vector3.Lerp(transform.position, desiredPosition, Time.deltaTime * damping);
-        transform.position = position;
+        transform.position = player.transform.position + offset;
+
     }
 }

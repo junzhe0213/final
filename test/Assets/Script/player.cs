@@ -24,7 +24,7 @@ public class player : MonoBehaviour {
 	void FixedUpdate ()
     {
         //移動
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector3.forward * 4 * Time.deltaTime);
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
