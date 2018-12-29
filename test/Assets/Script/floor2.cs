@@ -37,12 +37,13 @@ public class floor2 : MonoBehaviour {
         bounce.volume = 0.25f;
         
         //方塊彈跳
-        if (player.transform.position.y > 0.7 && Jump == false && IsGround == true)
+
+        if ( player!=null && player.transform.position.y > 0.7 && Jump == false && IsGround == true)
         {
             Jump = true;
             if (Jump == true)
             {
-                GetComponent<Rigidbody>().AddForce(0, 100, 0);
+                GetComponent<Rigidbody>().AddForce(0, 200, 0);
                 bounce.Play();
                 IsGround = false;
             }
