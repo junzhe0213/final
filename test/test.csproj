@@ -266,18 +266,19 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Script\button_fadeout.cs" />
     <Compile Include="Assets\Script\camera_follow.cs" />
-    <Compile Include="Assets\Script\change_scene.cs" />
     <Compile Include="Assets\Script\cube_rotate.cs" />
     <Compile Include="Assets\Script\floor.cs" />
     <Compile Include="Assets\Script\floor_move.cs" />
     <Compile Include="Assets\Script\floor2.cs" />
     <Compile Include="Assets\Script\jumping_destory.cs" />
+    <Compile Include="Assets\Script\launcher.cs" />
+    <Compile Include="Assets\Script\normal_button.cs" />
     <Compile Include="Assets\Script\player.cs" />
     <Compile Include="Assets\Script\player_destory.cs" />
     <Compile Include="Assets\Script\player_menu.cs" />
     <Compile Include="Assets\Script\rhombus.cs" />
-    <Compile Include="Assets\Script\start_button.cs" />
     <Compile Include="Assets\Script\tree.cs" />
     <Compile Include="Assets\Script\trigger.cs" />
   </ItemGroup>

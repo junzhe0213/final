@@ -38,11 +38,13 @@ public class floor2 : MonoBehaviour {
         
         //方塊彈跳
 
-        if ( player!=null && player.transform.position.y > 0.7 && Jump == false && IsGround == true)
+        if ( player!=null && player.transform.position.y > 0.6 && Jump == false && IsGround == true)
         {
+            Debug.Log("1");
             Jump = true;
             if (Jump == true)
             {
+                Debug.Log(".");
                 GetComponent<Rigidbody>().AddForce(0, 200, 0);
                 bounce.Play();
                 IsGround = false;

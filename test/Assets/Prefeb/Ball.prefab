@@ -116,7 +116,7 @@ MonoBehaviour:
   speed: 4
   jumpforce: 7
   gravity: 0.2
-  smoke: {fileID: 1134544852863334, guid: 5c85081c113a01443a4e33fb53e98cb3, type: 2}
+  smoke: {fileID: 1766358723534408, guid: 5c85081c113a01443a4e33fb53e98cb3, type: 2}
 --- !u!114 &114632369844805858
 MonoBehaviour:
   m_ObjectHideFlags: 1

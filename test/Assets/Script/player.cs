@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class player : MonoBehaviour
 {
     public bool IsGround;
+    //public bool gameover;
+    //public bool restart;
+
+    //public Text gameover_text;
+    //public Text restart_text;
 
     private Vector3 velocity = Vector3.zero;
     private Vector3 moveX;
@@ -47,7 +53,7 @@ public class player : MonoBehaviour
 
     void jumping()
     {
-        if (Input.GetKey(KeyCode.UpArrow) && IsGround)
+        if (Input.GetKey(KeyCode.UpArrow) && IsGround || Input.GetKey(KeyCode.Space) && IsGround)
         {
             moveY = jumpforce * Time.deltaTime * Vector3.up;
             if (transform.position.y > 0.4)
@@ -58,8 +64,7 @@ public class player : MonoBehaviour
             if (transform.position.y < 0.6)
             {
                 Debug.Log("123");
-                //var jump = new Vector3(transform.position.x , transform.position.y , transform.position.z);
-               // Instantiate(smoke, jump , transform.rotation);
+                Instantiate(smoke, transform.position, Quaternion.Euler(-90, 0, 0));
             }
         }
         else

@@ -40,10 +40,8 @@ public class player_menu : MonoBehaviour
             {
                 IsGround = false;
             }
-            if (transform.position.y < 0.8)
+            if (transform.position.y < 1)
             {
-                //var jump = new Vector3(transform.position.x, 1 , transform.position.z);
-                //Instantiate(smoke, jump, transform.rotation);
                 Instantiate(smoke, transform.position, Quaternion.Euler(-90, 0, 0));
             }
         }

@@ -23,7 +23,7 @@ public class player_destory : MonoBehaviour
         }
 
         //刪除角色
-        Destroy(Other.gameObject);
+        Other.gameObject.SetActive(false);
 
     }
 
