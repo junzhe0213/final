@@ -6,11 +6,6 @@ using UnityEngine.UI;
 public class player : MonoBehaviour
 {
     public bool IsGround;
-    //public bool gameover;
-    //public bool restart;
-
-    //public Text gameover_text;
-    //public Text restart_text;
 
     private Vector3 velocity = Vector3.zero;
     private Vector3 moveX;
@@ -41,14 +36,13 @@ public class player : MonoBehaviour
     {
         move();
         jumping();
-        velocity = moveX + moveY + Vector3.forward * 4 * Time.deltaTime;
-        //velocity = moveX + moveY;
+        velocity = moveX + moveY + Vector3.forward * speed * Time.deltaTime;
         transform.Translate(velocity);
     }
 
     void move()
     {
-        moveX = Input.GetAxisRaw("Horizontal") * speed * Time.deltaTime * Vector3.right;
+        moveX = Input.GetAxis("Horizontal") * 6 * Time.deltaTime * Vector3.right;
     }
 
     void jumping()

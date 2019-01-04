@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class floor_move : MonoBehaviour
 {
-    public GameObject smoke;
+    Vector3 speed;
 
-    void OnCollisionStay(Collision Other)
+    void FixedUpdate()
     {
-        if (Other.gameObject.tag == "Player")
-        {
-            Instantiate(smoke, Other.transform.position, Other.transform.rotation);
-        }
+        speed = Vector3.left * 6 * Time.deltaTime;
+        transform.Translate(speed);
 
     }
 }

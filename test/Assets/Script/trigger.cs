@@ -11,7 +11,7 @@ public class trigger : MonoBehaviour {
         sky.material.color = new Color32(81, 156, 244, 255);
     }
 
-    private void OnCollisionStay(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         sky.material.color = new Color32(81, 156, 244, 255);
         if (other.gameObject.tag == "Player")
