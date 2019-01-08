@@ -8,15 +8,14 @@ public class trigger : MonoBehaviour {
     private void Start()
     {
         sky = GetComponent<Skybox>();
-        sky.material.color = new Color32(81, 156, 244, 255);
+        sky.material.color = new Color32(129, 157, 248, 255);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        sky.material.color = new Color32(81, 156, 244, 255);
         if (other.gameObject.tag == "Player")
         {
-            sky.material.color = new Color32(166, 9, 234, 255);
+            sky.material.color = new Color32(255, 163, 241, 255);
         }
     }
 

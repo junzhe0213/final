@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class endless_button : MonoBehaviour
 {
@@ -19,5 +20,10 @@ public class endless_button : MonoBehaviour
     public void start()
     {
         endless.SetBool("back", false);
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene("Endless");
     }
 }

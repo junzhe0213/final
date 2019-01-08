@@ -8,7 +8,7 @@ public class floor_move : MonoBehaviour
 
     void FixedUpdate()
     {
-        speed = Vector3.left * 6 * Time.deltaTime;
+        speed = Vector3.left * 4 * Time.deltaTime;
         transform.Translate(speed);
 
     }

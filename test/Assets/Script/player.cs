@@ -12,10 +12,26 @@ public class player : MonoBehaviour
     private Vector3 moveY;
 
     public float speed = 4;
-    public float jumpforce = 4f;
-    public float gravity = 0.01F;
+    private float jumpforce = 7f;
+    private float gravity = 0.2F;
+
+    public int count;
 
     public GameObject smoke;
+
+    private void Start()
+    {
+        count = 0;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "score")
+        {
+            other.gameObject.SetActive(false);
+            count = count + 1;
+        }
+    }
 
     void OnCollisionStay(Collision Other)
     {
@@ -50,6 +66,7 @@ public class player : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow) && IsGround || Input.GetKey(KeyCode.Space) && IsGround)
         {
             moveY = jumpforce * Time.deltaTime * Vector3.up;
+            gameObject.GetComponent<AudioSource>().Play();
             if (transform.position.y > 0.4)
             {
                 IsGround = false;
@@ -64,6 +81,15 @@ public class player : MonoBehaviour
         else
         {
             moveY += gravity * Vector3.down * Time.deltaTime;
+        }
+
+        if (Input.GetKey(KeyCode.LeftAlt))
+            {
+            count = 3;
+            }
+        if (Input.GetKey(KeyCode.Z))
+        {
+            this.transform.position = new Vector3(0, 0.5f, 100);
         }
     }
 }

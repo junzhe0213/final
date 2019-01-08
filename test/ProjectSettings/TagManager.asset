@@ -8,6 +8,8 @@ TagManager:
   - floor2
   - outside
   - VFX
+  - score
+  - cone
   layers:
   - Default
   - TransparentFX

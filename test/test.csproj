@@ -268,8 +268,13 @@
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Script\camera_follow.cs" />
     <Compile Include="Assets\Script\cube_rotate.cs" />
+    <Compile Include="Assets\Script\Endless\cones.cs" />
+    <Compile Include="Assets\Script\Endless\floor_create.cs" />
+    <Compile Include="Assets\Script\Endless\gamecontroller_.cs" />
+    <Compile Include="Assets\Script\Endless\player_endless.cs" />
     <Compile Include="Assets\Script\floor.cs" />
     <Compile Include="Assets\Script\floor_move.cs" />
+    <Compile Include="Assets\Script\floor_move2.cs" />
     <Compile Include="Assets\Script\floor2.cs" />
     <Compile Include="Assets\Script\gamecontroller.cs" />
     <Compile Include="Assets\Script\jumping_destory.cs" />
@@ -278,12 +283,18 @@
     <Compile Include="Assets\Script\Menu\button_fadeout.cs" />
     <Compile Include="Assets\Script\Menu\endless_button.cs" />
     <Compile Include="Assets\Script\Menu\exit_button.cs" />
+    <Compile Include="Assets\Script\Menu\name.cs" />
     <Compile Include="Assets\Script\Menu\normal_button.cs" />
     <Compile Include="Assets\Script\Menu\player_menu.cs" />
+    <Compile Include="Assets\Script\obstacle.cs" />
     <Compile Include="Assets\Script\player.cs" />
     <Compile Include="Assets\Script\rhombus.cs" />
+    <Compile Include="Assets\Script\score.cs" />
+    <Compile Include="Assets\Script\spark.cs" />
+    <Compile Include="Assets\Script\speed_change.cs" />
     <Compile Include="Assets\Script\tree.cs" />
     <Compile Include="Assets\Script\trigger.cs" />
+    <Compile Include="Assets\Script\trigger_move.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />

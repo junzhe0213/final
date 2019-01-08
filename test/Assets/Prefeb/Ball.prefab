@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33397680047249328}
   - component: {fileID: 135522244426420170}
   - component: {fileID: 23061788154162992}
-  - component: {fileID: 114632369844805858}
   - component: {fileID: 114059606538491998}
   - component: {fileID: 54352969462403370}
   m_Layer: 0
@@ -114,20 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsGround: 0
   speed: 4
-  jumpforce: 7
-  gravity: 0.2
+  count: 0
   smoke: {fileID: 1766358723534408, guid: 5c85081c113a01443a4e33fb53e98cb3, type: 2}
---- !u!114 &114632369844805858
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1673439940615432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &135522244426420170
 SphereCollider:
   m_ObjectHideFlags: 1

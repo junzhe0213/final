@@ -32,9 +32,10 @@ public class player_menu : MonoBehaviour
     void FixedUpdate ()
     {
         moveX = Input.GetAxis("Horizontal") * 6 * Time.deltaTime * Vector3.right;
-        if (Input.GetKey(KeyCode.UpArrow) && IsGround)
+        if (Input.GetKey(KeyCode.UpArrow) && IsGround || Input.GetKey(KeyCode.Space) && IsGround)
         {
             moveY = jumpforce * Time.deltaTime * Vector3.up;
+            gameObject.GetComponent<AudioSource>().Play();
             if (transform.position.y > 0.4)
             {
                 IsGround = false;
