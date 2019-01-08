@@ -6,8 +6,11 @@ using UnityEngine.UI;
 
 public class gamecontroller_ : MonoBehaviour
 {
+    public bool gamestart;
+
     public Text gameset_text;
     public Text count_text;
+    public Text start;
     public Button restart;
     public Button menu;
 
@@ -27,16 +30,11 @@ public class gamecontroller_ : MonoBehaviour
         //UI隱藏及設定
         gameset_text.text = "";
         count_text.text = "";
+        start.text = "PRESS ( UP OR SPACE ) TO START";
         restart.gameObject.SetActive(false);
         menu.gameObject.SetActive(false);
-    }
-
-    private void Update()
-    {
-        if(player == null)
-        {
-            GameSet();
-        }
+        gamestart = false;
+        player.speed = 0;
     }
 
     void OnCollisionEnter(Collision Other)//碰撞判定
@@ -51,6 +49,20 @@ public class gamecontroller_ : MonoBehaviour
         {
             Destroy(Other.gameObject);
             Instantiate(explosion, Other.transform.position, Other.transform.rotation);
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.UpArrow) && gamestart == false || Input.GetKey(KeyCode.Space) && gamestart == false)
+        {
+            start.text = "";
+            player.speed = 4;
+            gameObject.GetComponent<AudioSource>().Play();
+            gamestart = true;
+        }
+        if (player == null)
+        {
             GameSet();
         }
     }

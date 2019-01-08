@@ -220,7 +220,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\lerptest.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -267,11 +266,13 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Script\camera_follow.cs" />
+    <Compile Include="Assets\Script\clear.cs" />
     <Compile Include="Assets\Script\cube_rotate.cs" />
     <Compile Include="Assets\Script\Endless\cones.cs" />
     <Compile Include="Assets\Script\Endless\floor_create.cs" />
     <Compile Include="Assets\Script\Endless\gamecontroller_.cs" />
     <Compile Include="Assets\Script\Endless\player_endless.cs" />
+    <Compile Include="Assets\Script\falling.cs" />
     <Compile Include="Assets\Script\floor.cs" />
     <Compile Include="Assets\Script\floor_move.cs" />
     <Compile Include="Assets\Script\floor_move2.cs" />
@@ -279,6 +280,7 @@
     <Compile Include="Assets\Script\gamecontroller.cs" />
     <Compile Include="Assets\Script\jumping_destory.cs" />
     <Compile Include="Assets\Script\launcher.cs" />
+    <Compile Include="Assets\Script\lerptest.cs" />
     <Compile Include="Assets\Script\Menu\back_button.cs" />
     <Compile Include="Assets\Script\Menu\button_fadeout.cs" />
     <Compile Include="Assets\Script\Menu\endless_button.cs" />
@@ -290,11 +292,16 @@
     <Compile Include="Assets\Script\player.cs" />
     <Compile Include="Assets\Script\rhombus.cs" />
     <Compile Include="Assets\Script\score.cs" />
+    <Compile Include="Assets\Script\score_rotate.cs" />
     <Compile Include="Assets\Script\spark.cs" />
     <Compile Include="Assets\Script\speed_change.cs" />
+    <Compile Include="Assets\Script\tirgger_gole.cs" />
     <Compile Include="Assets\Script\tree.cs" />
     <Compile Include="Assets\Script\trigger.cs" />
+    <Compile Include="Assets\Script\trigger_falling.cs" />
     <Compile Include="Assets\Script\trigger_move.cs" />
+    <Compile Include="Assets\Script\trigger_stop.cs" />
+    <Compile Include="Assets\Script\wall_move.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />

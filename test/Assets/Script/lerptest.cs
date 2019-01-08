@@ -12,21 +12,21 @@ public class lerptest : MonoBehaviour
     private Renderer rend;
     private Color baseColor;
 
-	// Use this for initialization
-	//void Start () {
-        //rend = GetComponent<Renderer>();
-        //baseColor = rend.material.GetColor("_EmissionColor");
-	//}
+	//Use this for initialization
+	void Start () {
+        rend = GetComponent<Renderer>();
+        baseColor = rend.material.GetColor("_EmissionColor");
+	}
 	
-	// Update is called once per frame
+	 //Update is called once per frame
 	void Update () {
-        //if (lightUp)
+        if (lightUp)
         {
-            //viewValue = Mathf.Lerp(viewValue, targetValue, Time.deltaTime * speed);
-            //Color currentColor = baseColor * Mathf.LinearToGammaSpace(viewValue);
-            //rend.material.SetColor("_EmissionColor", currentColor);
+            viewValue = Mathf.Lerp(viewValue, targetValue, Time.deltaTime * speed);
+            Color currentColor = baseColor * Mathf.LinearToGammaSpace(viewValue);
+            rend.material.SetColor("_EmissionColor", currentColor);
         }
-        //else
+        else
         {
             //viewValue = Mathf.Lerp(viewValue, baseBias, Time.deltaTime * speed);
             //Color currentColor = baseColor * Mathf.LinearToGammaSpace(viewValue);

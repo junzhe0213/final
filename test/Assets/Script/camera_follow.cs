@@ -15,7 +15,7 @@ public class camera_follow : MonoBehaviour
         if (player != null && CheckMargin())
         {
             var distance = new Vector3(transform.position.x, transform.position.y, player.transform.position.z - margin);
-            transform.position = Vector3.MoveTowards(transform.position, distance, 0.25f);
+            transform.position = Vector3.MoveTowards(transform.position, distance, 10f);
         }
     }
 

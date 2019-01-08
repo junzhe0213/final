@@ -11,8 +11,6 @@ public class player_endless : MonoBehaviour
     private Vector3 moveY;
 
     public float speed = 4;
-    private float jumpforce = 7f;
-    private float gravity = 0.2F;
 
     public int count;
 
@@ -49,7 +47,6 @@ public class player_endless : MonoBehaviour
     void FixedUpdate()
     {
         move();
-        jumping();
         velocity = moveX + moveY + Vector3.forward * speed * Time.deltaTime;
         transform.Translate(velocity);
     }
@@ -57,37 +54,5 @@ public class player_endless : MonoBehaviour
     void move()
     {
         moveX = Input.GetAxis("Horizontal") * 6 * Time.deltaTime * Vector3.right;
-    }
-
-    void jumping()
-    {
-        if (Input.GetKey(KeyCode.UpArrow) && IsGround || Input.GetKey(KeyCode.Space) && IsGround)
-        {
-            moveY = jumpforce * Time.deltaTime * Vector3.up;
-            gameObject.GetComponent<AudioSource>().Play();
-            if (transform.position.y > 0.4)
-            {
-                IsGround = false;
-                Debug.Log("456");
-            }
-            if (transform.position.y < 0.6)
-            {
-                Debug.Log("123");
-                Instantiate(smoke, transform.position, Quaternion.Euler(-90, 0, 0));
-            }
-        }
-        else
-        {
-            moveY += gravity * Vector3.down * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.LeftAlt))
-        {
-            count = 3;
-        }
-        if (Input.GetKey(KeyCode.Z))
-        {
-            this.transform.position = new Vector3(0, 0.5f, 100);
-        }
     }
 }

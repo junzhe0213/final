@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/junzhe/Desktop/final/ball.exe
+C:/Users/junzhe/Desktop/final/RunAway.exe
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 4b12dd839b2293f8457cd67cc3610b85 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -13,6 +13,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 92d7a83ea3c7404e484f3b2eed421855 UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 92d7a83ea3c7404e484f3b2eed421855 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 d29057dcfb9f6888e22b5bc3f21d9b38 UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.floor_move2
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.floor_move
 ce98cfa4b1c3083a0f2a2a8d8a75ae7f Assembly-CSharp.dll:.trigger_move
 3d348cbf1f2b79f33cae81947c302602 Assembly-CSharp.dll:.score
@@ -120,8 +121,12 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 a7b3f9fe84e72f3fbf94a3d07f64b5b2 Assembly-CSharp.dll:.floor2
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.obstacle
-2424fafce8fe59cef28e56056e8a1737 Assembly-CSharp.dll:.player
+7bb8e6360dd815268660881a2f2b6481 Assembly-CSharp.dll:.player
+dac6b68fb67a2608e0900d0b9980b818 Assembly-CSharp.dll:.floor_create
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.name
+badd74d09c43b9a63da0370f73d0a073 Assembly-CSharp.dll:.speed_change
 205965134a5874db410d674ebdf33ba7 Assembly-CSharp.dll:.ExampleWheelController
+9982fac15dcd9d11232d51b39bedaef0 Assembly-CSharp.dll:.cones
 2b5bd81c259c691324a17af9a3e97e85 Assembly-CSharp.dll:.launcher
 63e8d95fdca252a4e0cc753d6a3f792b Assembly-CSharp.dll:.trigger
 9be3217fa3e74c6b702f78869db8e14d Assembly-CSharp.dll:.back_button
@@ -158,13 +163,15 @@ f671a42aea5f34fec6a4450a3668c615 Assembly-CSharp.dll:UnityEngine.PostProcessing.
 690057aa9d85b276def140ced09de1d0 Assembly-CSharp.dll:.button_fadeout
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.normal_button
 bb132023e65b3cdf1c61404358e38a8d Assembly-CSharp.dll:.endless_button
-9f0a1926de6940ab2d4aa562db853d94 Assembly-CSharp.dll:.tree
-c9b72add5456798e3439ac3695922fb2 Assembly-CSharp.dll:.gamecontroller
+e28930fcc8515bba01073f0ba8967349 Assembly-CSharp.dll:.tree
+b9492eb206dd12e0540842bc88803940 Assembly-CSharp.dll:.gamecontroller
+3591e97fc46de1c11108b50b25ae7665 Assembly-CSharp.dll:.gamecontroller_
 e28930fcc8515bba01073f0ba8967349 Assembly-CSharp.dll:.camera_follow
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.floor_move2
-badd74d09c43b9a63da0370f73d0a073 Assembly-CSharp.dll:.speed_change
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.name
-dac6b68fb67a2608e0900d0b9980b818 Assembly-CSharp.dll:.floor_create
-a25a346a3d9c8632770914a63e051439 Assembly-CSharp.dll:.gamecontroller_
 2424fafce8fe59cef28e56056e8a1737 Assembly-CSharp.dll:.player_endless
-3043c295292f11837736d0cf416fda71 Assembly-CSharp.dll:.cones
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.score_rotate
+8b64882ac37581d1e5112abaadbc9c82 Assembly-CSharp.dll:.falling
+f86ee2a0a49c369edc0f7f792e8920e8 Assembly-CSharp.dll:.trigger_falling
+311f2f34c658f3ae69640af4fb1db5ee Assembly-CSharp.dll:.clear
+210a79ab0875337867fa31460e1e04ae Assembly-CSharp.dll:.trigger_stop
+c1390b000705fcb0c74f78a6fc47010e Assembly-CSharp.dll:.wall_move
+7cc2e9f54ed79c115ae78f8342e67081 Assembly-CSharp.dll:.tirgger_gole

@@ -6,6 +6,6 @@ public class jumping_destory : MonoBehaviour {
 
 	void Update ()
     {
-        Destroy(gameObject , 0.8f);
+        Destroy(gameObject , 1f);
     }
 }

@@ -18,10 +18,16 @@ public class player : MonoBehaviour
     public int count;
 
     public GameObject smoke;
+    public GameObject sc;
+
+    public AudioSource jumping;
+    public AudioSource score;
 
     private void Start()
     {
         count = 0;
+        jumping = gameObject.GetComponent<AudioSource>();
+        score = sc.GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -30,6 +36,7 @@ public class player : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count = count + 1;
+            score.Play();
         }
     }
 
@@ -50,23 +57,23 @@ public class player : MonoBehaviour
 
     void FixedUpdate()
     {
-        move();
-        jumping();
+        Move();
+        Jumping();
         velocity = moveX + moveY + Vector3.forward * speed * Time.deltaTime;
         transform.Translate(velocity);
     }
 
-    void move()
+    void Move()
     {
         moveX = Input.GetAxis("Horizontal") * 6 * Time.deltaTime * Vector3.right;
     }
 
-    void jumping()
+    void Jumping()
     {
         if (Input.GetKey(KeyCode.UpArrow) && IsGround || Input.GetKey(KeyCode.Space) && IsGround)
         {
             moveY = jumpforce * Time.deltaTime * Vector3.up;
-            gameObject.GetComponent<AudioSource>().Play();
+            jumping.Play();
             if (transform.position.y > 0.4)
             {
                 IsGround = false;
@@ -89,7 +96,7 @@ public class player : MonoBehaviour
             }
         if (Input.GetKey(KeyCode.Z))
         {
-            this.transform.position = new Vector3(0, 0.5f, 100);
+            this.transform.position = new Vector3(0, 0.5f, 137);
         }
     }
 }

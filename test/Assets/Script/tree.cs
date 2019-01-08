@@ -4,28 +4,29 @@ using UnityEngine;
 
 public class tree : MonoBehaviour
 {
-    public bool gamezone;
+    public float margin;
 
-    private void OnTriggerEnter(Collider Other)
+    private Vector3 offset;
+
+    public Transform player;
+
+    void Update()
     {
-        if (Other.gameObject.tag == "outside")
+        if (player != null && CheckMargin() || player != null && CheckMargin2())
         {
-            gamezone = true;
+            var distance = new Vector3(transform.position.x, transform.position.y, player.transform.position.z + margin);
+            transform.position = Vector3.MoveTowards(transform.position, distance, 10f);
         }
-       
     }
 
-    private void FixedUpdate()
+    //Camera跟Player的距離
+    bool CheckMargin()
     {
-        if(gamezone == true)
-        {
-            transform.Translate(0,-1 * Time.deltaTime, - 3 * Time.deltaTime);
-        }
-
-        else
-        {
-            transform.Translate(Vector3.forward * 0 * Time.deltaTime);
-        }
+        return Mathf.Abs(transform.position.z - player.transform.position.z) >= margin;
+    }
+    bool CheckMargin2()
+    {
+        return Mathf.Abs(transform.position.z - player.transform.position.z) <= margin;
     }
 
 }
